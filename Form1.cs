@@ -24,6 +24,14 @@ namespace Echo_Messenger
             // 앞뒤 공백 제거
             typed_msg = typed_msg.Trim();
 
+            // 글자 수 50자 초과 시 경고 메시지 표시 및 전송 차단
+            if (typed_msg.Length > 50)
+            {
+                MessageBox.Show("메시지는 50자 이내로 입력해주세요.", "글자 수 초과",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             // 타임스탬프를 메시지 앞에 결합
             string result = $"{DateTime.Now:yyyy-MM-dd HH:mm:ss} {typed_msg}";
 
@@ -51,6 +59,34 @@ namespace Echo_Messenger
                 // 엔터키 입력 소리 방지
                 e.SuppressKeyPress = true;
             }
+        }
+
+        // 선택 항목 삭제 버튼 클릭 이벤트 핸들러
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            // 선택된 항목이 없는 경우 예외 처리
+            if (lstMessages.SelectedItem == null)
+            {
+                MessageBox.Show("삭제할 항목을 먼저 선택해주세요.", "알림",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            // 선택된 항목 삭제
+            lstMessages.Items.Remove(lstMessages.SelectedItem);
+
+            // 메시지 개수 업데이트
+            lblCount.Text = $"현재 대화: {lstMessages.Items.Count}개";
+        }
+
+        // 대화 기록 전체 삭제 버튼 클릭 이벤트 핸들러
+        private void btnClearAll_Click(object sender, EventArgs e)
+        {
+            // 리스트의 모든 내용을 한 번에 삭제
+            lstMessages.Items.Clear();
+
+            // 메시지 개수 업데이트
+            lblCount.Text = $"현재 대화: 0개";
         }
     }
 }
