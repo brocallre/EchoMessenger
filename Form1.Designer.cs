@@ -61,6 +61,7 @@ namespace Echo_Messenger
             txtInput.Name = "txtInput";
             txtInput.Size = new Size(560, 47);
             txtInput.TabIndex = 2;
+            txtInput.KeyDown += txtInput_KeyDown;
             //
             // btnSend - 전송 버튼
             //
