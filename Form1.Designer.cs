@@ -32,6 +32,7 @@ namespace Echo_Messenger
             lstMessages = new ListBox();
             txtInput = new TextBox();
             btnSend = new Button();
+            lblCount = new Label();
             SuspendLayout();
             //
             // lblTitle - 타이틀 라벨
@@ -75,12 +76,23 @@ namespace Echo_Messenger
             btnSend.UseVisualStyleBackColor = false;
             btnSend.Click += btnSend_Click;
             //
+            // lblCount - 메시지 개수 표시 라벨
+            //
+            lblCount.AutoSize = true;
+            lblCount.Font = new Font("맑은 고딕", 10F);
+            lblCount.Location = new Point(30, 595);
+            lblCount.Name = "lblCount";
+            lblCount.Size = new Size(200, 35);
+            lblCount.TabIndex = 4;
+            lblCount.Text = "현재 대화: 0개";
+            //
             // Form1
             //
             AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Beige;
-            ClientSize = new Size(800, 620);
+            ClientSize = new Size(800, 650);
+            Controls.Add(lblCount);
             Controls.Add(btnSend);
             Controls.Add(txtInput);
             Controls.Add(lstMessages);
@@ -97,5 +109,6 @@ namespace Echo_Messenger
         private ListBox lstMessages;
         private TextBox txtInput;
         private Button btnSend;
+        private Label lblCount;
     }
 }

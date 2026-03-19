@@ -21,8 +21,17 @@ namespace Echo_Messenger
                 return;
             }
 
+            // 앞뒤 공백 제거
+            typed_msg = typed_msg.Trim();
+
+            // 타임스탬프를 메시지 앞에 결합
+            string result = $"{DateTime.Now:yyyy-MM-dd HH:mm:ss} {typed_msg}";
+
             // 메시지를 리스트박스에 추가
-            lstMessages.Items.Add(typed_msg);
+            lstMessages.Items.Add(result);
+
+            // 메시지 개수를 하단 라벨에 업데이트
+            lblCount.Text = $"현재 대화: {lstMessages.Items.Count}개";
 
             // 입력창 비우기
             txtInput.Clear();
