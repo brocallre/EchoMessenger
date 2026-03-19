@@ -36,87 +36,87 @@ namespace Echo_Messenger
             btnDelete = new Button();
             btnClearAll = new Button();
             SuspendLayout();
-            //
-            // lblTitle - 타이틀 라벨
-            //
+            // 
+            // lblTitle
+            // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("맑은 고딕", 20F, FontStyle.Bold);
             lblTitle.ForeColor = Color.Navy;
             lblTitle.Location = new Point(30, 20);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(340, 71);
+            lblTitle.Size = new Size(561, 89);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "Echo Messenger";
-            //
-            // lstMessages - 메시지 목록
-            //
+            // 
+            // lstMessages
+            // 
             lstMessages.Font = new Font("맑은 고딕", 11F);
             lstMessages.FormattingEnabled = true;
             lstMessages.Location = new Point(30, 110);
             lstMessages.Name = "lstMessages";
-            lstMessages.Size = new Size(720, 370);
+            lstMessages.Size = new Size(836, 354);
             lstMessages.TabIndex = 1;
-            //
-            // txtInput - 메시지 입력창
-            //
+            // 
+            // txtInput
+            // 
             txtInput.Font = new Font("맑은 고딕", 11F);
-            txtInput.Location = new Point(30, 500);
+            txtInput.Location = new Point(31, 486);
             txtInput.MaxLength = 50;
             txtInput.Name = "txtInput";
-            txtInput.Size = new Size(560, 47);
+            txtInput.Size = new Size(560, 56);
             txtInput.TabIndex = 2;
             txtInput.KeyDown += txtInput_KeyDown;
-            //
-            // btnSend - 전송 버튼
-            //
+            // 
+            // btnSend
+            // 
             btnSend.BackColor = Color.LimeGreen;
             btnSend.Font = new Font("맑은 고딕", 14F, FontStyle.Bold);
-            btnSend.Location = new Point(610, 490);
+            btnSend.Location = new Point(646, 470);
             btnSend.Name = "btnSend";
-            btnSend.Size = new Size(140, 60);
+            btnSend.Size = new Size(220, 80);
             btnSend.TabIndex = 3;
             btnSend.Text = "전송";
             btnSend.UseVisualStyleBackColor = false;
             btnSend.Click += btnSend_Click;
-            //
-            // lblCount - 메시지 개수 표시 라벨
-            //
+            // 
+            // lblCount
+            // 
             lblCount.AutoSize = true;
             lblCount.Font = new Font("맑은 고딕", 10F);
             lblCount.Location = new Point(30, 560);
             lblCount.Name = "lblCount";
-            lblCount.Size = new Size(200, 35);
+            lblCount.Size = new Size(240, 46);
             lblCount.TabIndex = 4;
             lblCount.Text = "현재 대화: 0개";
-            //
-            // btnDelete - 선택 항목 삭제 버튼
-            //
+            // 
+            // btnDelete
+            // 
             btnDelete.Font = new Font("맑은 고딕", 10F);
-            btnDelete.Location = new Point(450, 555);
+            btnDelete.Location = new Point(364, 555);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(140, 45);
+            btnDelete.Size = new Size(226, 99);
             btnDelete.TabIndex = 5;
             btnDelete.Text = "삭제";
             btnDelete.UseVisualStyleBackColor = true;
             btnDelete.Click += btnDelete_Click;
-            //
-            // btnClearAll - 대화 기록 전체 삭제 버튼
-            //
+            // 
+            // btnClearAll
+            // 
             btnClearAll.Font = new Font("맑은 고딕", 10F);
             btnClearAll.Location = new Point(600, 555);
             btnClearAll.Name = "btnClearAll";
-            btnClearAll.Size = new Size(150, 45);
+            btnClearAll.Size = new Size(266, 99);
             btnClearAll.TabIndex = 6;
             btnClearAll.Text = "대화 기록 삭제";
             btnClearAll.UseVisualStyleBackColor = true;
             btnClearAll.Click += btnClearAll_Click;
-            //
+            // 
             // Form1
-            //
+            // 
             AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Beige;
-            ClientSize = new Size(800, 620);
+            ClientSize = new Size(1550, 1049);
             Controls.Add(btnClearAll);
             Controls.Add(btnDelete);
             Controls.Add(lblCount);
